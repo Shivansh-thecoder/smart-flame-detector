@@ -1,0 +1,26 @@
+# ---------------------------------------------------
+# 🌍 Smart Flame Detector – GitHub Language & Format
+# ---------------------------------------------------
+
+# 🧠 Treat .ino and .cpp as C++ code for syntax highlighting
+*.ino linguist-language=C++
+*.cpp linguist-language=C++
+
+# 🐍 Treat Python files normally
+*.py linguist-language=Python
+
+# 🔡 Normalize text files to use LF (cross-platform line endings)
+* text=auto eol=lf
+
+# 🧰 Exclude virtual environments and build outputs from GitHub language stats
+.venv/* linguist-vendored
+.pio/* linguist-vendored
+.vscode/* linguist-vendored
+__pycache__/* linguist-vendored
+
+# ✅ Ensure CSV and model files are treated as data (not code)
+*.csv linguist-documentation
+*.pkl linguist-documentation
+
+# 🪶 Markdown and documentation files
+*.md linguist-language=Markdown
